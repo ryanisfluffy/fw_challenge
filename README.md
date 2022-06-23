@@ -29,7 +29,7 @@ These resources create the backbone for the app to allow communication outside o
 
 ### EC2 Instance
 
-The application runs on a `t2-micro` instance by default, within the default vpc.
+The application runs on a `t2-micro` instance by default, within the generated vpc.
 
 ### Security Group/Rules
 
