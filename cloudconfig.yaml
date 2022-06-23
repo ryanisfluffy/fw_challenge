@@ -1,0 +1,13 @@
+#cloud-config
+repo_update: true
+rep_upgrade: all
+packages:
+  - docker
+
+runcmd:
+  - usermod -a -G docker ec2-user
+  - systemctl enable docker.service
+  - systemctl start docker.service
+  - /usr/bin/docker run --rm --name rustpad -p 3030:3030 ekzhang/rustpad
+
+
